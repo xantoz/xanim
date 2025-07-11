@@ -117,6 +117,7 @@ extern xaULONG xa_forkit;
 
 /*********************** LINUX INCLUDES ********************************/
 #ifdef XA_LINUX_AUDIO
+#include <sys/ioctl.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <sys/time.h>

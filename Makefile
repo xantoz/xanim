@@ -73,8 +73,8 @@ XANIM = xanim
 #         fine.
 #
 # CC = cc
-# CC = gcc
-CC = egcs
+CC = gcc
+#CC = egcs
 #
 ######### OPTIMIZATION FLAGS
 # -- Specifiy Any compiler Optimization flags that you wish to use. This
@@ -535,7 +535,7 @@ XA_MISC_DEFS = $(XA_CMAP) $(XA_XTPTR) $(XA_SHARED) $(XA_MULTIBUF) $(XA_MACH_DEFS
 XA_DEFS = $(XA_MISC_DEFS) $(XA_MOD_DEFS) $(XA_AUDIO_DEFS) -DXA_PETUNIA -DXA_KPCD
 XA_LIBS = $(XA_X11R6_LIBS) $(XA_MACH_LIBS) $(XA_MOD_LIBS) $(XA_AUDIO_LIBS) 
 XA_INCS = $(INCLUDE) $(XA_VIDEO_INCS) $(XA_AUDIO_INCS)
-CFLAGS	=  $(DEBUG) $(OPTIMIZE)
+CFLAGS	=  $(DEBUG) $(OPTIMIZE) -std=c90 -Wno-implicit-int -Wno-int-conversion -Wno-return-type -I/usr/include/X11
 
 #####################################
 # FINAL LIBS
